@@ -5,7 +5,7 @@ on:
       - master
       - main
 env:
-  LATEX_ROOT: sd-lab-ws
+  LATEX_ROOT: curriculum-vitae
 jobs:
   compile:
     runs-on: ubuntu-latest
