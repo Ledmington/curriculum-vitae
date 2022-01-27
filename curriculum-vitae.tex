@@ -13,20 +13,15 @@
 \geometry{
 	top=3.25cm, % Top margin
 	bottom=4cm, % Bottom margin
-	left=3.5cm, % Left margin
-	right=3.5cm, % Right margin
+	left=3cm, % Left margin
+	right=3cm, % Right margin
 	headheight=0.75cm, % Header height
 	footskip=1cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.75cm, % Space from the top margin to the baseline of the header
 	%showframe, % Uncomment to show how the type block is set on the page
 }
 
-\usepackage{marginnote} % Required to output text in the margin
-
-\newcommand{\years}[1]{\marginnote{\small #1}} % New command for adding years to the margin
-\renewcommand*{\raggedleftmarginnote}{} % Left-align the years in the margin
-\setlength{\marginparsep}{-10pt} % Move the margin content closer to the text
-\reversemarginpar % Margin text to be output into the left margin instead of the default right margin
+\newcommand{\years}[1]{{\large #1}\\}
 
 \usepackage[usenames, dvipsnames]{xcolor} % Required for specifying colours by name
 \usepackage[bookmarks, colorlinks, breaklinks]{hyperref} % Required for links
@@ -50,15 +45,15 @@
 		\setlength\itemsep{0em}
 		\item #2
 		\item[-] Mail: #3
-		\item[*] Telefono: #4
-		\item[.] Sito: #5
+		\item[$\star$] Telefono: #4
+		\item[$\circ$] Sito: #5
 		\item[] \textit{#6}
 	\end{itemize}
 }
 
 \newcommand{\https}[1]{\href{https://#1}{#1}}
 
-\newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\Large #2}/30 \else {\Large 30}/30 con lode \fi\\}
+\newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\Large #2}{\small /30} \else {\Large 30}{\small /30 con lode} \fi\\}
 
 \newcommand{\skill}[2]{#1 #2/10}
 
@@ -186,7 +181,7 @@
 	\skill{GitHub Actions}{7}
 	
 	\section*{Altre attività}
-	\years{2018} Ho partecipato agli allenamenti della squadra di Cesena del ACM ICPC.
+	\years{2018} Ho partecipato agli allenamenti della squadra di Cesena del ACM ICPC.\\
 	
 	\years{2014} Ho raggiunto le fasi provinciali delle Olimpiadi di Matematica.
 	
