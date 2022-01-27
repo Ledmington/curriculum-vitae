@@ -6,6 +6,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{tikz}
+
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{gray}{HTML}{4D4D4D}
+\definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{midnightblue}{HTML}{191970}
 
 \setlength{\parindent}{0pt}
 
@@ -23,7 +29,7 @@
 
 \newcommand{\years}[1]{{\large #1}\\}
 
-\usepackage[usenames, dvipsnames]{xcolor} % Required for specifying colours by name
+\usepackage{xcolor} % Required for specifying colours by name
 \usepackage[bookmarks, colorlinks, breaklinks]{hyperref} % Required for links
 
 % Set link colours
@@ -31,7 +37,7 @@
 	linkcolor=blue,
 	citecolor=blue,
 	filecolor=black,
-	urlcolor=MidnightBlue
+	urlcolor=midnightblue
 }
 
 \hypersetup{
@@ -55,7 +61,16 @@
 
 \newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\Large #2}{\small /30} \else {\Large 30}{\small /30 con lode} \fi\\}
 
-\newcommand{\skill}[2]{#1 #2/10}
+%\newcommand{\skill}[2]{#1 #2/10}
+\newcommand{\skill}[1]{ 
+	\begin{tikzpicture}
+		\foreach [count=\i] \x/\y in {#1}{
+			\draw[fill=maingray,maingray] (0,\i) rectangle (10,\i+0.4);
+			\draw[fill=white,midnightblue](0,\i) rectangle (\y,\i+0.4);
+			\node[above right] at (0,\i+0.4) {\x};
+		}
+	\end{tikzpicture}
+}
 
 \usepackage{subfiles}
 
