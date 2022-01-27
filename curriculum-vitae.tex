@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage[italian]{babel}
+\usepackage{crimson} % whole document font
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -8,9 +9,8 @@
 
 \setlength{\parindent}{0pt}
 
-\usepackage{geometry}
+\usepackage[a4paper]{geometry}
 \geometry{
-	paper=a4paper, % Paper size, change to letterpaper for US letter size
 	top=3.25cm, % Top margin
 	bottom=4cm, % Bottom margin
 	left=3.5cm, % Left margin
@@ -20,13 +20,6 @@
 	headsep=0.75cm, % Space from the top margin to the baseline of the header
 	%showframe, % Uncomment to show how the type block is set on the page
 }
-
-\usepackage[semibold]{ebgaramond}
-\usepackage{sectsty} % Allows changing the font options for sections in a document
-
-\sectionfont{\fontsize{13.5pt}{18pt}\selectfont} % Set font options for sections
-%\subsectionfont{\mdseries\scshape\normalsize} % Set font options for subsections
-\subsubsectionfont{\mdseries\upshape\bfseries\normalsize} % Set font options for subsubsections
 
 \usepackage{marginnote} % Required to output text in the margin
 
@@ -65,7 +58,7 @@
 
 \newcommand{\https}[1]{\href{https://#1}{#1}}
 
-\newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\large #2}/30 \else {\large 30}/30 con lode \fi\\}
+\newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\Large #2}/30 \else {\Large 30}/30 con lode \fi\\}
 
 \newcommand{\skill}[2]{#1 #2/10}
 
@@ -82,8 +75,8 @@
 	47838 Riccione (RN), Italia
 	\medskip % Whitespace
 	
-	Telefono: +39 327-2207037\\
-	Fisso: +39 0541-644233
+	Telefono: +39 327 2207037\\
+	Fisso: +39 0541 644233
 	\medskip
 	
 	\noindent
@@ -117,7 +110,7 @@
 	\years{2021 - oggi} \textbf{Laurea Magistrale} in Ingegneria e Scienze Informatiche presso Alma Mater Studiorum Università di Bologna, Campus di Cesena
 	
 	\subsection*{Esami sostenuti durante il corso di laurea triennale}
-	\begin{minipage}[t]{.45\textwidth}
+	\begin{minipage}[t]{.47\textwidth}
 		\exam{Algebra e Geometria}{26}
 		\exam{Algoritmi e Strutture Dati}{31}
 		\exam{Analisi Matematica}{27}
@@ -131,7 +124,7 @@
 		\exam{Matematica Discreta e Probabilità}{25}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{.45\textwidth}
+	\begin{minipage}[t]{.47\textwidth}
 		\exam{Metodi Numerici}{22}
 		\exam{Programmazione}{28}
 		\exam{Programmazione ad Oggetti}{28}
@@ -167,9 +160,13 @@
 	{\small Ultimo aggiornamento: 27/01/2022}
 	\medskip
 	
-	\begin{tabular}{ll}
-		\textbf{Machine Learning} & 29/30\\
-	\end{tabular}
+	\begin{minipage}[t]{.47\textwidth}
+		\exam{Machine Learning}{29}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.47\textwidth}
+		% aggiungere qui futuri esami
+	\end{minipage}
 	
 	\section*{Confidenza}
 	\subsection*{Linguaggi di programmazione}
