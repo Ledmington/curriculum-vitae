@@ -51,6 +51,24 @@
 	pdfauthor={Filippo Barbari}
 }
 
+\newcommand{\referenza}[6]{
+	\textbf{#1}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item #2
+		\item[-] Mail: #3
+		\item[*] Telefono: #4
+		\item[.] Sito: #5
+		\item[] \textit{#6}
+	\end{itemize}
+}
+
+\newcommand{\https}[1]{\href{https://#1}{#1}}
+
+\newcommand{\exam}[2]{\textbf{#1}  #2/30}
+
+\newcommand{\skill}[2]{\texttt{#1} #2/10}
+
 \begin{document}
 	
 	\begin{wrapfigure}[0]{r}{0.2\textwidth}
@@ -58,42 +76,102 @@
 	\end{wrapfigure}
 		
 	{\LARGE\bfseries Filippo Barbari} % Name
-	\bigskip\bigskip\medskip % Whitespace
+	\bigskip
 	
 	Via Emilia 42\\ % Address
 	47838 Riccione (RN), Italia
 	\medskip % Whitespace
 	
-	Cellulare: 327-2207037\\
+	Telefono: 327-2207037\\
 	Fisso: 0541-644233
 	\medskip
 	
-	Email: \href{mailto:filippo.barbari@studio.unibo.it}{filippo.barbari@studio.unibo.it}
+	\noindent
+	\begin{tabular}{ll}
+		Email: & \href{mailto:filippo.barbari@gmail.com}{filippo.barbari@gmail.com}\\
+		Email istituzionale: & \href{mailto:filippo.barbari@studio.unibo.it}{filippo.barbari@studio.unibo.it}
+	\end{tabular}
 	\medskip
 	
 	Nato: 24 agosto 1999, Rimini (RN), Italia\\ % Date of birth
 	Nazionalità: Italiana % Nationality
 	
+	\section*{Referenze}
+	
+	\referenza{Prof. Moreno Marzolla}
+	{Professore associato del Dipartimento di Informatica - Scienza e Ingegneria (DISI), Università di Bologna, Italia.}
+	{\href{mailto:moreno.marzolla@unibo.it}{moreno.marzolla@unibo.it}}
+	{+39 0547 338861}
+	{\href{https://www.moreno.marzolla.name}{www.moreno.marzolla.name}}
+	{\textit{Il Prof. Marzolla è stato il relatore della mia tesi di laurea Triennale e il tutor del mio tirocinio curriculare.}}
+	
 	\section*{Formazione}
+	\years{2013-2018} \textbf{Diploma di Maturità} conseguito con votazione 90/100 presso Liceo Scientifico A. Volta, Riccione (RN)\\
 	
-	\years{2013-2018} Diploma di Maturità conseguito con votazione 90/100 presso Liceo Scientifico A. Volta, Riccione (RN)\\
-	\years{2018-2021} Laurea Triennale in Ingegneria e Scienze Informatiche conseguita con votazione 106/110 presso Alma Mater Studiorum Università di Bologna, Campus di Cesena in data 7 ottobre 2021
+	\years{2018-2021} \textbf{Laurea Triennale} in Ingegneria e Scienze Informatiche conseguita con votazione 106/110 presso Alma Mater Studiorum Università di Bologna, Campus di Cesena in data 7 ottobre 2021\\
 	
-	\subsection*{Esami rilevanti sostenuti durante il corso di laurea}
+	\years{2021-oggi} \textbf{Laurea Magistrale} in Ingegneria e Scienze Informatiche presso Alma Mater Studiorum Università di Bologna, Campus di Cesena
 	
+	\subsection*{Esami sostenuti durante il corso di laurea triennale}
 	\begin{tabular}{ll}
-		\textbf{Programmazione} & votazione 28/30\\
-		\textbf{Algoritmi e Strutture Dati} & votazione 30/30 con lode\\
-		\textbf{High-Performance Computing} & votazione 30/30\\
-		\textbf{Crittografia} & votazione 30/30
+		\textbf{Programmazione} & 28/30\\
+		\textbf{Architetture degli Elaboratori} & 29/30\\
+		\textbf{Analisi Matematica} & 27/30\\
+		\textbf{Algoritmi e Strutture Dati} & 30/30 con lode\\
+		\textbf{Algebra e Geometria} & 26/30\\
+		\textbf{Programmazione di Reti} & 28/30\\
+		\textbf{Programmazione ad Oggetti} & 28/30\\
+		\textbf{Metodi Numerici} & 22/30\\
+		\textbf{Matematica Discreta e Probabilità} & 25/30\\
+		\textbf{Fisica} & 30/30 con lode\\
+		\textbf{Basi di Dati} & 30/30\\
+		\textbf{Sistemi Operativi} & 24/30\\
+		\textbf{Computer Graphics} & 28/30\\
+		\textbf{Crittografia} & 30/30\\
+		\textbf{High-Performance Computing} & 30/30\\
+		\textbf{Ingegneria del software} & 23/30\\
+		\textbf{Programmazione di Applicazioni Data-Intensive} & 27/30\\
+		\textbf{Reti di telecomunicazione} & 23/30\\
+		\textbf{Ricerca operativa} & 26/30\\
+		\textbf{Tecnologie web} & 24/30\\
+	\end{tabular}
+
+	\subsection*{Tirocinio curriculare}
+	Sviluppo e valutazione delle prestazioni di un'applicazione parallela per simulazioni tecnico-scientifiche.
+	
+	Tutor: Prof. Moreno Marzolla
+	
+	Lo scopo di questo tirocinio è stato lo sviluppo di una simulazione per il calcolo dell'impacchettamento ottimale di sfere rappresentanti particelle di carburante all'interno di un serbatoio cubico.
+	
+	\subsection*{Tesi di Laurea Triennale}
+	Implementazione CUDA dell'algoritmo di Bellman-Ford.
+	
+	Relatore: Prof. Moreno Marzolla
+	
+	Progettazione, sviluppo e valutazione delle prestazioni di tre differenti implementazioni parallele dell'algoritmo di Bellman-Ford su GPU.
+	
+	Votazione finale: 106/110
+	
+	Link: \https{amslaurea.unibo.it/24313}
+	
+	Codice: \https{github.com/Ledmington/bellman-ford-cuda}
+	
+	\subsection*{Esami sostenuti durante il corso di laurea magistrale}
+	\noindent{\small Ultimo aggiornamento: 27/01/2022}
+	\\
+	\begin{tabular}{ll}
+		\textbf{Machine Learning} & 29/30\\
 	\end{tabular}
 	
 	\section*{Lingue}
-	
 	Italiano: madrelingua\\
 	Inglese: FCE livello B-2
 	
-	% Any final footer text such as a URL to the latest version of this CV, last updated date, compiled in XeTeX, etc
+	\section*{Skill}
+	\skill{C}{9}\\
+	\skill{C++}{6}\\
+	\skill{Java}{7}
+	
 	\vfill
 	\begin{center}
 		\scriptsize
