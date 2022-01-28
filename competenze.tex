@@ -2,49 +2,77 @@
 
 \begin{document}
 	\section*{Competenze}
-		\paragraph*{Legenda autovalutazione competenze}
-			\begin{table}[!h]
+		\subsubsection*{Legenda autovalutazione competenze}
+			\begin{table}[!ht]
 				\begin{tabular}{cl}
 					\drawbar{0} & Nessuna esperienza\\
-					\drawbar{1} & So utilizzare le funzionalità basilari\\
-					\drawbar{2} & Conosco alcune funzionalità avanzate\\
-					\drawbar{3} & Posso realizzare semplici programmi o modificarne di esistenti\\
-					\drawbar{4} & Posso integrare nuove funzionalità a programmi già esistenti\\
+					\drawbar{1} & So leggere un programma e utilizzare le funzionalità di base\\
+					\drawbar{2} & Conosco alcune funzionalità avanzate e posso applicare piccole modifiche a programmi esistenti\\
+					\drawbar{3} & Posso realizzare semplici programmi senza bisogno di aiuto e so risolvere i problemi più comuni\\
+					\drawbar{4} & Posso integrare nuove funzionalità a sistemi già esistenti\\
 					\drawbar{5} & Posso realizzare da zero un sistema complesso\\
 					\drawbar{6} & L'ho realizzato io\\
 				\end{tabular}
 			\end{table}
 			
 		\subsection*{Linguaggi di programmazione/Framework}
-			\begin{table}[!ht]
-				\centering
-				\begin{tabular}{lclclc}
-					C      & \drawbar{5} & C++    & \drawbar{1} & C\#        & \drawbar{6}\\
-					OpenMP & \drawbar{4} & MPI    & \drawbar{0} & CUDA       & \drawbar{5}\\
-					Java   & \drawbar{3} & Python & \drawbar{2} & JavaScript & \drawbar{4}\\
-					PHP    & \drawbar{2} & MatLab & \drawbar{3} & Bash       & \drawbar{4}\\
-					% Fortran?
-				\end{tabular}
-			\end{table}
+			\begin{minipage}[t]{.3\textwidth}
+				C \hfill \drawbar{5}\\
+				OpenMP \hfill \drawbar{4}\\
+				Java \hfill \drawbar{5}\\
+				PHP \hfill \drawbar{2}\\  % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{.3\textwidth}
+				C++ \hfill \drawbar{4}\\
+				MPI \hfill \drawbar{4}\\
+				Python \hfill \drawbar{4}\\
+				MatLab \hfill \drawbar{2}\\  % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{.3\textwidth}
+				C\# \hfill \drawbar{3}\\
+				CUDA \hfill \drawbar{4}\\
+				JavaScript \hfill \drawbar{2}\\
+				Bash \hfill \drawbar{3}\\  % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
 		
 		\subsection*{Altri linguaggi}
-			\begin{table}[!ht]
-				\centering
-				\begin{tabular}{lclclc}
-					HTML & \drawbar{7} & Markdown & \drawbar{6} & CSS & \drawbar{4}\\
-					JSON & \drawbar{6} & SQL      & \drawbar{7} & XML & \drawbar{6}\\
-					YAML & \drawbar{6} & \LaTeX   & \drawbar{8} & &\\
-				\end{tabular}
-			\end{table}
+			\begin{minipage}[t]{.3\textwidth}
+				HTML \hfill \drawbar{2}\\
+				JSON \hfill \drawbar{2}\\
+				YAML \hfill \drawbar{1}\\ % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{.3\textwidth}
+				Markdown \hfill \drawbar{3}\\
+				SQL \hfill \drawbar{3}\\
+				\LaTeX \hfill \drawbar{4}\\ % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{.3\textwidth}
+				CSS \hfill \drawbar{3}\\
+				XML \hfill \drawbar{3}\\ % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
 		
 		\subsection*{Software}
-			\begin{table}%[!ht]
-				\centering
-				\begin{tabular}{lclclc}
-					Visual Studio & \drawbar{9} & Git       & \drawbar{8} & Blender       & \drawbar{6}\\
-					Gradle        & \drawbar{6} & Docker    & \drawbar{7} & Intellij IDEA & \drawbar{8}\\
-					Eclipse       & \drawbar{7} & GitHub    & \drawbar{7} & BitBucket     & \drawbar{6}\\
-					GitLab        & \drawbar{5} & TeXstudio & \drawbar{7} & &\\
-				\end{tabular}
-			\end{table}
+			\begin{minipage}[t]{.3\textwidth}
+				Visual Studio \hfill \drawbar{2}\\
+				Gradle \hfill \drawbar{2}\\
+				Eclipse \hfill \drawbar{2}\\
+				GitLab \hfill \drawbar{1}\\  % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{.3\textwidth}
+				Git \hfill \drawbar{3}\\
+				Docker \hfill \drawbar{3}\\
+				GitHub \hfill \drawbar{2}\\
+				TeXstudio \hfill \drawbar{3}\\  % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{.3\textwidth}
+				Blender \hfill \drawbar{3}\\
+				Intellij IDEA \hfill \drawbar{3}\\
+				BitBucket \hfill \drawbar{1}\\ % <-- this '\\' keeps the bars aligned without using a table
+			\end{minipage}
 \end{document}
