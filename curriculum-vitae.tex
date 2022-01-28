@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{tikz}
+\usepackage{calc} % to multiply and divide numerical parameters
 
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{gray}{HTML}{4D4D4D}
@@ -61,14 +62,17 @@
 
 \newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\Large #2}{\small /30} \else {\Large 30}{\small /30 con lode} \fi\\}
 
-%\newcommand{\skill}[2]{#1 #2/10}
-\newcommand{\skill}[1]{ 
+%\newcommand{\skill}[2]{#1 \hfill #2/10}
+\newcommand{\drawbar}[1]{
 	\begin{tikzpicture}
-		\foreach [count=\i] \x/\y in {#1}{
-			\draw[fill=maingray,maingray] (0,\i) rectangle (10,\i+0.4);
-			\draw[fill=white,midnightblue](0,\i) rectangle (\y,\i+0.4);
-			\node[above right] at (0,\i+0.4) {\x};
-		}
+%		\filldraw[color=midnightblue!60, very thick](-1,0) circle (0.1);
+%		\filldraw[color=midnightblue!60, very thick](-0.7,0) circle (0.1);
+%		\filldraw[color=midnightblue!60, very thick](-0.4,0) circle (0.1);
+%		\filldraw[color=midnightblue!60, very thick](-0.1,0) circle (0.1);
+%		\filldraw[color=midnightblue!60, very thick](0.2,0) circle (0.1);
+%		\filldraw[color=midnightblue!60, very thick](0.5,0) circle (0.1);
+		\draw[fill=maingray,maingray] (0,0) rectangle (3,0.2);
+		\draw[fill=midnightblue]      (0,0) rectangle (#1*0.3,0.2);
 	\end{tikzpicture}
 }
 
