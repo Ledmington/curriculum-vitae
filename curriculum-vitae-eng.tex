@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[italian]{babel}
+\usepackage{crimson} % whole document font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{calc} % to multiply and divide numerical parameters
+
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{gray}{HTML}{4D4D4D}
+\definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{midnightblue}{HTML}{191970}
+
+\setlength{\parindent}{0pt}
+
+\usepackage[a4paper]{geometry}
+\geometry{
+	top=3.25cm, % Top margin
+	bottom=4cm, % Bottom margin
+	left=3cm, % Left margin
+	right=3cm, % Right margin
+	headheight=0.75cm, % Header height
+	footskip=1cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.75cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+\newcommand{\years}[1]{{\large #1}\\}
+
+\usepackage{xcolor} % Required for specifying colours by name
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref} % Required for links
+
+% Set link colours
+\hypersetup{
+	linkcolor=blue,
+	citecolor=blue,
+	filecolor=black,
+	urlcolor=midnightblue
+}
+
+\hypersetup{
+	pdftitle={Filippo Barbari - Curriculum vitae},
+	pdfauthor={Filippo Barbari}
+}
+
+\newcommand{\referenza}[6]{
+	\textbf{#1}
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item #2
+		\item[-] Mail: #3
+		\item[$\star$] Telefono: #4
+		\item[$\circ$] Sito: #5
+		\item[] \textit{#6}
+	\end{itemize}
+}
+
+\newcommand{\https}[1]{\href{https://#1}{#1}}
+
+\newcommand{\exam}[2]{\textbf{#1}\hfill \ifnum #2<31 {\Large #2}{\small /30} \else {\Large 30}{\small /30 con lode} \fi\\}
+
+\newcommand{\drawbar}[1]{
+	\begin{tikzpicture}
+		\foreach \x in {1,...,6}{
+			\ifnum \x<#1
+				\filldraw[color=midnightblue!60, very thick](-1+\x*0.3,0) circle (0.1);
+			\else
+				\ifnum \x=#1
+					\filldraw[color=midnightblue!60, very thick](-1+\x*0.3,0) circle (0.1);
+				\else
+					\filldraw[color=maingray!60, very thick](-1+\x*0.3,0) circle (0.1);
+				\fi
+			\fi
+		}
+	\end{tikzpicture}
+}
+
+\usepackage{subfiles}
+
+\begin{document}
+	
+	\subfile{introduction-ita}
+	
+	\subfile{references-ita}
+	
+	\subfile{education-ita}
+	
+	\subfile{skills-ita}
+	
+	\subfile{activities-ita}
+	
+	\vfill
+	\begin{center}
+		\scriptsize
+		Ultimo aggiornamento: \today
+	\end{center}
+	
+\end{document}
