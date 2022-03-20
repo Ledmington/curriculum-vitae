@@ -4,4 +4,4 @@
 *.out
 *.synctex.gz
 
-!docs/
+!docs/*.pdf
