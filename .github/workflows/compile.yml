@@ -1,6 +1,7 @@
 name: compile
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -36,6 +37,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DRY_RUN: true
+
+      - name: Delete latest release
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo
+            const { data: { id } } = await github.repos.getLatestRelease({ owner, repo })
+            await github.repos.deleteRelease({ owner, repo, release_id: id })
 
       - name: Get Time
         id: current-time
