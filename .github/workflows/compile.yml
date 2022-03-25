@@ -67,7 +67,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./${{ env.LATEX_ROOT_ITA }}.pdf
-          asset_name: ${{ env.LATEX_ROOT_ITA }}-${{ steps.bump-version.outputs.new_tag }}-${{ steps.current-time.outputs.time }}.pdf
+          asset_name: ${{ env.LATEX_ROOT_ITA }}.pdf
           asset_content_type: application/pdf
 
       - name: Upload CV eng
@@ -78,5 +78,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./${{ env.LATEX_ROOT_ENG }}.pdf
-          asset_name: ${{ env.LATEX_ROOT_ENG }}-${{ steps.bump-version.outputs.new_tag }}-${{ steps.current-time.outputs.time }}.pdf
+          asset_name: ${{ env.LATEX_ROOT_ENG }}.pdf
           asset_content_type: application/pdf
