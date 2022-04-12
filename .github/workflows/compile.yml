@@ -20,7 +20,7 @@ jobs:
           submodules: recursive
 
       - name: Generate skills
-	run: python3 generate_skills.py
+        run: python3 generate_skills.py
           
       - name: Build latex ita
         uses: xu-cheng/latex-action@v2
