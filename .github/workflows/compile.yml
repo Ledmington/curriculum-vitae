@@ -83,3 +83,9 @@ jobs:
           asset_path: ./${{ env.LATEX_ROOT_ENG }}.pdf
           asset_name: ${{ env.LATEX_ROOT_ENG }}.pdf
           asset_content_type: application/pdf
+
+      - name: Upload certificates
+        id: upload-certificates
+        uses: actions/upload-artifact@v3
+        with:
+          path: docs/*.pdf
