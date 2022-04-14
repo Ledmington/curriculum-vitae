@@ -70,7 +70,8 @@ jobs:
 
       - name: Upload certificates
         id: upload-certificates
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        uses: alexellis/upload-assets@0.2.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: ./docs/*.pdf
+          asset_paths: '["./docs/*.pdf"]'
