@@ -20,7 +20,8 @@ libraries = {
     "OpenGL": 3,
     "MPI": 4,
     "OpenMP": 4,
-    "Scikit-learn": 3
+    "Scikit-learn": 3,
+    "OpenACC": 1
 }
 
 other = {
@@ -28,9 +29,9 @@ other = {
     "\\LaTeX": 4,
     "XML": 3,
     "HTML": 2,
-    "Markdown": 3,
-    "YAML": 2,
-    "JSON": 2,
+    "Markdown": 4,
+    "YAML": 3,
+    "JSON": 3,
     "SQL": 3
 }
 
@@ -44,8 +45,8 @@ software = {
     "Git": 4,
     "Gradle": 3,
     "PyCharm": 3,
-    "Docker": 3,
-    "GitHub": 3,
+    "Docker": 4,
+    "GitHub": 4,
     "Intellij IDEA": 3,
     "\\TeX Studio": 3
 }
@@ -53,10 +54,10 @@ software = {
 legend = {
     "ita": [
         "Nessuna esperienza",
-        "So leggere un programma e utilizzare le funzionalità di base",
-        "Conosco alcune funzionalità avanzate e posso applicare piccole modifiche a programmi esistenti",
-        "Posso realizzare semplici programmi senza bisogno di aiuto e so risolvere i problemi più comuni",
-        "Posso integrare nuove funzionalità a sistemi già esistenti",
+        "So leggere un programma e utilizzare le funzionalit\\'a di base",
+        "Conosco alcune funzionalit\\'a avanzate e posso applicare piccole modifiche a programmi esistenti",
+        "Posso realizzare semplici programmi senza bisogno di aiuto e so risolvere i problemi pi\\'u comuni",
+        "Posso integrare nuove funzionalit\\'a a sistemi gi\\'a esistenti",
         "Posso realizzare da zero un sistema complesso",
         "Conoscenza completa e approfondita"
     ],
